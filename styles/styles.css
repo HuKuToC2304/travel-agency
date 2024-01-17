@@ -1,0 +1,126 @@
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-Bold.woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-SemiBold.woff2);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-Medium.woff2);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Volkhov;
+  src: url(/fonts/Volkhov-Bold.woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Open Sans;
+  src: url(/fonts/OpenSans-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Open sans;
+  src: url(/fonts/OpenSans-Medium.woff2);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-size: 17px;
+}
+
+:root {
+  --font-family-base: Open Sans;
+  --font-family-alternative: Volkhov;
+  --font-family-additional: Poppins;
+  --color-dark: #000000;
+  --color-orange-base: #DF6951;
+  --color-alternative: #181E4B;
+  --animation-time: .3s;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header__inner {
+  padding-inline: clamp(70px, 9.7087378641vw, 140px);
+  padding-block: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  column-gap: clamp(40px, 6.241331484vw, 90px);
+}
+.header__menu-list {
+  list-style-type: none;
+  display: flex;
+  column-gap: 55px;
+}
+.header__menu-link {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-family: var(--font-family-additional);
+  font-weight: 500;
+}
+.header__button-wrapper {
+  display: flex;
+  gap: 50px;
+}
+.header__button-login {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 9px 22px;
+}
+.header__button {
+  padding: 9px 22px;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button {
+  font-family: var(--font-family-additional);
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.logo__image {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .header__inner {
+    flex-wrap: wrap;
+  }
+}

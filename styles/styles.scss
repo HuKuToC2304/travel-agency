@@ -1,0 +1,81 @@
+@import
+    'globals',
+    'normalize',
+    'mixins';
+
+.header {
+   
+    &__inner {
+        @include fluid-padding-inline;
+        padding-block: 45px;
+        @include flex-center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        @include fluid-gap-header-menu;
+    }
+    
+    &__menu-list {
+        list-style-type: none;
+        display: flex;
+        column-gap: 55px;
+    }
+
+    &__menu-link {
+        text-decoration: none;
+        color: var(--color-dark);
+        font-family: var(--font-family-additional);
+        font-weight: 500;
+    }
+
+    &__button-wrapper {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__button-login {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 9px 22px;
+        
+    }
+
+   
+    &__button {
+        padding: 9px 22px;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.button {
+    font-family: var(--font-family-additional);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.logo {
+    &__image {
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .header {
+        &__inner {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+       
+    }
+}

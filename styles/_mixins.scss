@@ -1,0 +1,13 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin fluid-padding-inline ($min: 70, $max: 140) {
+    padding-inline: clamp(#{$min}px, #{$max / 1442 * 100}vw, #{$max}px);
+}
+
+@mixin fluid-gap-header-menu ($min: 40, $max: 90) {
+    column-gap: clamp(#{$min}px, #{$max / 1442 * 100}vw, #{$max}px);
+}
