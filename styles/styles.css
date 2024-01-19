@@ -49,6 +49,25 @@
 }
 body {
   font-size: 17px;
+  padding-inline: 75px;
+}
+
+.container {
+  max-width: 1230px;
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 :root {
@@ -70,11 +89,14 @@ body {
 }
 
 .header__inner {
-  padding-inline: clamp(70px, 9.7087378641vw, 140px);
+  padding-inline: 45px;
   padding-block: 45px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.header__logo {
+  margin-right: 25px;
 }
 .header__menu {
   display: flex;
@@ -119,7 +141,78 @@ body {
   display: block;
 }
 
-@media (max-width: 1200px) {
+.about__agency-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__agency-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 545px;
+  row-gap: 35px;
+}
+.about__agency-subheadings {
+  font-family: var(--font-family-additional);
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--color-orange-base);
+  font-weight: 700;
+}
+.about__agency-title {
+  font-family: var(--font-family-alternative);
+  font-size: 70px;
+  color: #181E4B;
+  margin-top: 25px;
+}
+.about__agency-subtitle {
+  font-family: var(--font-family-additional);
+  font-weight: 500;
+  color: #5E6282;
+  font-size: 19px;
+  line-height: 187.5%;
+  margin-top: 30px;
+}
+.about__agency-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 45px;
+}
+.about__agency-button_more {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 25px;
+  background-color: #F1A501;
+  border-radius: 10px;
+  color: #fff;
+  font-family: var(--font-family-base);
+  font-weight: 500;
+}
+.about__agency-button_play {
+  background-image: url("/icons/about__agency-button-play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-orange-base);
+  border-radius: 50%;
+  padding: 25px;
+  border: none;
+  cursor: pointer;
+}
+.about__agency-button_wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.about__button-play_info {
+  color: #686D77;
+  font-family: var(--font-family-additional);
+  font-weight: 500;
+  font-size: 17px;
+}
+
+@media (max-width: 1162px) {
   .header__inner {
     flex-wrap: wrap;
   }

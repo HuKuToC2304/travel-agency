@@ -6,9 +6,13 @@
 .header {
    
     &__inner {
-        @include fluid-padding-inline;
+        padding-inline: 45px;
         padding-block: 45px;
         @include flex-center;
+    }
+
+    &__logo {
+        margin-right: 25px;
     }
 
     &__menu {
@@ -64,12 +68,96 @@
     }
 }
 
+.about {
+    &__agency-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
+    &__agency-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 545px;
+        row-gap: 35px;
+    }
 
-@media (max-width: 1200px) {
+    &__agency-subheadings {
+        font-family: var(--font-family-additional);
+        text-transform: uppercase;
+        font-size: 20px;
+        color: var(--color-orange-base);
+        font-weight: 700;
+    }
+
+    &__agency-title {
+        font-family: var(--font-family-alternative);
+        font-size: 70px;
+        color: #181E4B;
+        margin-top: 25px;
+    }
+
+    &__agency-subtitle {
+        font-family: var(--font-family-additional);
+        font-weight: 500;
+        color: #5E6282;
+        font-size: 19px;
+        line-height: 187.5%;
+        margin-top: 30px;
+    }
+
+    &__agency-buttons {
+        display: flex;
+        align-items: center;
+        column-gap: 45px;
+    }
+
+    &__agency-button_more {
+        display: inline-block;
+        text-decoration: none;
+        padding: 16px 25px;
+        background-color: #F1A501;
+        border-radius: 10px;
+        color: #fff;
+        font-family: var( --font-family-base);
+        font-weight: 500;
+    }
+
+    &__agency-button_play {
+        background-image: url('/icons/about__agency-button-play.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 12px;
+        height: 12px;
+        background-color: var(--color-orange-base);
+        border-radius: 50%;
+        padding: 25px;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__agency-button_wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__button-play_info {
+        color: #686D77;
+        font-family: var(--font-family-additional);
+        font-weight: 500;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1162px) {
     .header {
         &__inner {
             flex-wrap: wrap;
+        }
+
+        &__menu-link {
+            
         }
     }
 }
