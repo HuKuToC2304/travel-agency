@@ -167,6 +167,24 @@
     }
 }
 
+.service {
+    text-align: center;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 240px);
+        column-gap: 40px;
+        list-style-type: none;
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        padding: 45px;
+        flex: 1 1 0;
+    }
+}
+
 @media (max-width: 1162px) {
     .header {
         &__inner {
