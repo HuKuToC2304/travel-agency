@@ -226,19 +226,110 @@ body {
 }
 
 .service {
+  padding-block: 105px 123px;
   text-align: center;
+  position: relative;
+}
+.service::before {
+  content: "";
+  position: absolute;
+  background-image: url("/images/service-decoration-before.svg");
+  background-repeat: no-repeat;
+  width: 153px;
+  height: 166px;
+  right: 0;
+  top: 105px;
+  z-index: -10;
+}
+.service__inner {
+  display: flex;
+  flex-direction: column;
+}
+.service__subheading {
+  font-family: var(--font-family-base);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #5E6282;
+}
+.service__title {
+  font-family: var(--font-family-alternative);
+  font-size: 50px;
+  font-weight: 700;
+  color: #14183E;
 }
 .service__list {
   display: grid;
-  grid-template-columns: repeat(4, 240px);
-  column-gap: 40px;
+  grid-template-columns: repeat(4, 255px);
+  grid-template-rows: auto;
+  justify-content: space-between;
   list-style-type: none;
+  margin-top: 60px;
 }
 .service__list-item {
   display: flex;
   flex-direction: column;
-  padding: 45px;
-  flex: 1 1 0;
+  align-items: center;
+  padding: 40px;
+}
+.service__list-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--font-family-base);
+  margin-top: 25px;
+  color: #1E1D4C;
+}
+.service__list-subtitle {
+  font-family: var(--font-family-additional);
+  color: #5E6282;
+  font-weight: 500;
+  line-height: 162.5%;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.service--flights {
+  box-shadow: rgba(104, 109, 119, 0.3568627451) 0 10px 15px -8px;
+  border-radius: 30px;
+}
+
+.service--flights::before {
+  content: "";
+  display: block;
+  background-image: url("/images/service--flights-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 129px;
+  height: 91px;
+}
+
+.service--weather::before {
+  content: "";
+  display: block;
+  background-image: url("/icons/service--weather-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 95px;
+  height: 80px;
+}
+
+.local--events::before {
+  content: "";
+  display: block;
+  background-image: url("/images/local--events-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70px;
+  height: 76px;
+}
+
+.service--customization::before {
+  content: "";
+  display: block;
+  background-image: url("/images/service--customization-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 77px;
+  height: 66px;
 }
 
 @media (max-width: 1162px) {
