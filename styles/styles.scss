@@ -87,14 +87,14 @@
     &__agency-subheadings {
         font-family: var(--font-family-additional);
         text-transform: uppercase;
-        font-size: 20px;
+        @include fluid-subheading-about;
         color: var(--color-orange-base);
         font-weight: 700;
     }
 
     &__agency-title {
         font-family: var(--font-family-alternative);
-        font-size: 70px;
+        @include fluid-title-size-about;
         color: #181E4B;
         margin-top: 25px;
         position: relative;
