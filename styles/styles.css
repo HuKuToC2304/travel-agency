@@ -109,6 +109,7 @@ body {
   column-gap: 55px;
 }
 .header__menu-link {
+  padding-block: 15px;
   text-decoration: none;
   color: var(--color-dark);
   font-family: var(--font-family-additional);
@@ -125,6 +126,7 @@ body {
   padding: 9px 22px;
 }
 .header__button {
+  max-width: 210px;
   padding: 9px 22px;
   border-radius: 5px;
   background-color: transparent;
@@ -256,6 +258,7 @@ body {
   font-size: 50px;
   font-weight: 700;
   color: #14183E;
+  margin-top: 15px;
 }
 .service__list {
   display: grid;
@@ -263,7 +266,7 @@ body {
   grid-template-rows: auto;
   justify-content: space-between;
   list-style-type: none;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .service__list-item {
   display: flex;
