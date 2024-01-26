@@ -89,7 +89,6 @@ body {
 }
 
 .header__inner {
-  padding-inline: 45px;
   padding-block: 45px;
   display: flex;
   align-items: center;
@@ -168,18 +167,6 @@ body {
   margin-top: 25px;
   position: relative;
 }
-.about__agency-title::before {
-  content: "";
-  display: block;
-  background-image: url("/icons/decoration-about-agency-title.svg");
-  background-repeat: no-repeat;
-  width: 396px;
-  height: 14px;
-  position: absolute;
-  right: -65px;
-  top: 70px;
-  z-index: -10;
-}
 .about__agency-subtitle {
   font-family: var(--font-family-additional);
   font-weight: 500;
@@ -226,6 +213,10 @@ body {
   font-weight: 500;
   font-size: 17px;
 }
+.about__image {
+  width: 50%;
+  height: auto;
+}
 
 .service {
   padding-block: 105px 123px;
@@ -255,16 +246,15 @@ body {
 }
 .service__title {
   font-family: var(--font-family-alternative);
-  font-size: 50px;
+  font-size: clamp(32px, 3.46740638vw, 50px);
   font-weight: 700;
   color: #14183E;
   margin-top: 15px;
 }
 .service__list {
-  display: grid;
-  grid-template-columns: repeat(4, 255px);
-  grid-template-rows: auto;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   list-style-type: none;
   margin-top: 70px;
 }
@@ -272,7 +262,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 255px;
   padding: 40px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 .service__list-title {
   font-size: 18px;
@@ -335,8 +328,12 @@ body {
   height: 66px;
 }
 
-@media (max-width: 1162px) {
+@media (max-width: 1320px) {
   .header__inner {
+    display: flex;
     flex-wrap: wrap;
+  }
+  .header__menu {
+    margin-top: 20px;
   }
 }

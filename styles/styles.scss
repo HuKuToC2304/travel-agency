@@ -6,7 +6,6 @@
 .header {
    
     &__inner {
-        padding-inline: 45px;
         padding-block: 45px;
         @include flex-center;
     }
@@ -100,18 +99,6 @@
         position: relative;
         
 
-        &::before {
-            content: "";
-            display: block;
-            background-image: url('/icons/decoration-about-agency-title.svg');
-            background-repeat: no-repeat;
-            width: 396px;
-            height: 14px;
-            position: absolute;
-            right: -65px;
-            top: 70px;
-            z-index: -10;
-        }
     }
 
     
@@ -167,6 +154,11 @@
         font-weight: 500;
         font-size: 17px;
     }
+
+    &__image {
+        width: 50%;
+        height: auto;
+    }
 }
 
 .service {
@@ -200,26 +192,33 @@
 
     &__title {
         font-family: var(--font-family-alternative);
-        font-size: 50px;
+        @include service-title-fluid;
         font-weight: 700;
         color: #14183E;
         margin-top: 15px;
     }
 
     &__list {
-        display: grid;
-        grid-template-columns: repeat( 4, 255px);
-        grid-template-rows: auto;
-        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        // display: grid;
+        // grid-template-columns: repeat( 4, 255px);
+        // grid-template-rows: auto;
         list-style-type: none;
         margin-top: 70px;
+        // justify-content: space-between;
+        
     }
 
     &__list-item {
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 255px;
         padding: 40px;
+        flex-grow: 1;
+        flex-shrink: 1;
     }
 
     &__list-title {
@@ -281,20 +280,16 @@
     height: 66px;
 }
 
-@media (max-width: 1162px) {
+@media (max-width: 1320px) {
     .header {
         &__inner {
+            display: flex;
             flex-wrap: wrap;
         }
 
-        &__menu-link {
-            
+        &__menu {
+            margin-top: 20px;
         }
-    }
-}
 
-@media (max-width: 1000px) {
-    .header {
-       
     }
 }
