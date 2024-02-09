@@ -275,6 +275,33 @@
     height: 66px;
 }
 
+
+.destinations {
+    
+    &__subheading {
+        text-align: center;
+        color: rgb(94, 98, 130);
+        font-weight: 500;
+        font-size: 18px;
+        font-family: var(--font-family-base);
+    }
+
+    &__list {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, 314px);
+        grid-template-rows: auto;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
 @media (max-width: 1320px) {
     .header {
         &__inner {
