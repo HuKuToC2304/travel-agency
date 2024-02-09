@@ -199,15 +199,12 @@
     }
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        // display: grid;
-        // grid-template-columns: repeat( 4, 255px);
-        // grid-template-rows: auto;
+        display: grid;
+        grid-template-columns: repeat( 4, 255px);
+        grid-template-rows: auto;
         list-style-type: none;
         margin-top: 70px;
-        // justify-content: space-between;
+        justify-content: space-between;
         
     }
 
@@ -217,8 +214,6 @@
         align-items: center;
         max-width: 255px;
         padding: 40px;
-        flex-grow: 1;
-        flex-shrink: 1;
     }
 
     &__list-title {
